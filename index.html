@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/60 backdrop-blur-lg z-50">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-3xl font-extrabold text-cyan-400 text-glow hover-scale">Portfolio</h1>
+            <div class="space-x-10">
+                <a href="#home" class="nav-link text-lg text-gray-200 hover:text-cyan-400 text-glow">Home</a>
+                <a href="#about" class="nav-link text-lg text-gray-200 hover:text-cyan-400 text-glow">About</a>
+                <a href="#projects" class="nav-link text-lg text-gray-200 hover:text-cyan-400 text-glow">Projects</a>
+                <a href="#contact" class="nav-link text-lg text-gray-200 hover:text-cyan-400 text-glow">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section relative overflow-hidden">
+        <video class="video-bg" autoplay muted loop>
+            <source src="https://player.vimeo.com/external/459345252.sd.mp4?s=3ad3c4e9b593bf452c407df71415db95f34f36cd&profile_id=164" type="video/mp4">
+        </video>
+        <div class="text-center z-10">
+            <h1 class="text-6xl md:text-8xl font-extrabold mb-6 animate-title text-glow">Hi, I'm Your Name</h1>
+            <p class="text-2xl md:text-3xl text-gray-300 mb-10 animate-subtitle text-glow">Creative Developer & Designer</p>
+            <a href="#projects" class="inline-block px-10 py-4 gradient-btn text-black font-bold rounded-full cyan-glow hover-scale">See My Work</a>
+        </div>
+        <div id="particle-container" class="absolute inset-0"></div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section bg-gray-900/40">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-cyan-400 text-glow">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="w-full md:w-1/2 animate-image">
+                    <img src="https://images.unsplash.com/photo-1516321310764-9f51c5a88ff9" alt="Profile" class="rounded-xl cyan-glow hover-scale">
+                </div>
+                <div class="w-full md:w-1/2 text-gray-200 animate-text">
+                    <p class="text-xl mb-6">I'm a passionate developer obsessed with crafting immersive web experiences that push boundaries.</p>
+                    <p class="text-xl mb-6">With expertise in cutting-edge technologies, I transform ideas into visually stunning and highly functional realities.</p>
+                    <div class="flex gap-6 mt-8">
+                        <span class="px-6 py-3 bg-cyan-500/30 text-cyan-400 rounded-full hover-scale text-glow">React</span>
+                        <span class="px-6 py-3 bg-cyan-500/30 text-cyan-400 rounded-full hover-scale text-glow">Tailwind</span>
+                        <span class="px-6 py-3 bg-cyan-500/30 text-cyan-400 rounded-full hover-scale text-glow">Three.js</span>
+                        <span class="px-6 py-3 bg-cyan-500/30 text-cyan-400 rounded-full hover-scale text-glow">GSAP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section relative">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-extrabold text-center mb-16 text-cyan-400 text-glow">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="card rounded-xl p-8 animate-card">
+                    <img src="https://images.unsplash.com/photo-1516321310764-9f51c5a88ff9" alt="Project 1" class="rounded-lg mb-6 hover-scale cyan-glow">
+                    <h3 class="text-2xl font-bold text-cyan-400 text-glow">Project One</h3>
+                    <p class="text-gray-300">A futuristic web app with React, Tailwind, and WebGL animations.</p>
+                </div>
+                <div class="card rounded-xl p-8 animate-card">
+                    <img src="https://images.unsplash.com/photo-1516321310764-9f51c5a88ff9" alt="Project 2" class="rounded-lg mb-6 hover-scale cyan-glow">
+                    <h3 class="text-2xl font-bold text-cyan-400 text-glow">Project Two</h3>
+                    <p class="text-gray-300">Real-time data dashboard with interactive 3D visualizations.</p>
+                </div>
+                <div class="card rounded-xl p-8 animate-card">
+                    <img src="https://images.unsplash.com/photo-1516321310764-9f51c5a88ff9" alt="Project 3" class="rounded-lg mb-6 hover-scale cyan-glow">
+                    <h3 class="text-2xl font-bold text-cyan-400 text-glow">Project Three</h3>
+                    <p class="text-gray-300">E-commerce platform with immersive animations and AR features.</p>
+                </div>
+            </div>
+        </div>
+        <div id="particle-container-projects" class="absolute inset-0"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section bg-gray-900/40">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-5xl font-extrabold mb-16 text-cyan-400 text-glow">Get in Touch</h2>
+            <p class="text-xl text-gray-300 mb-10">Ready to create something epic together? Let's connect!</p>
+            <div class="flex justify-center gap-8 animate-icons">
+                <a href="#" class="text-3xl text-gray-200 hover:text-cyan-400 hover-scale text-glow"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-3xl text-gray-200 hover:text-cyan-400 hover-scale text-glow"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-3xl text-gray-200 hover:text-cyan-400 hover-scale text-glow"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="mt-12">
+                <a href="mailto:your.email@example.com" class="inline-block px-10 py-4 gradient-btn text-black font-bold rounded-full cyan-glow hover-scale">Send a Message</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
